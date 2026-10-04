@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendizaje interactivo</title>
+    <link rel="stylesheet" href="aprendizaje_interactivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="aprendizaje_interactivo.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------------->
+    <!--|estructuracion_aprendizaje_interactivo|-->
+    <!-------------------------------------------->
+    <main class="contenedor">
+        <!-- Encabezado con título y subtítulo -->
+        <header class="encabezado">
+            <h1>📚 Aprendizaje Interactivo</h1>
+            <p>Lección: los tres pilares de una página web</p>
+        </header>
+        <!-- Lección: tres tarjetas con la explicación de cada tecnología -->
+        <section class="leccion">
+            <!-- Tema 1: HTML -->
+            <article class="tema">
+                <h2>1. HTML</h2>
+                <p>
+                    HTML es el <strong>esqueleto</strong> de la página. Con él se crean
+                    los títulos, párrafos, imágenes, botones y enlaces.
+                </p>
+            </article>
+            <!-- Tema 2: CSS -->
+            <article class="tema">
+                <h2>2. CSS</h2>
+                <p>
+                    CSS es el <strong>diseño</strong>. Con él se cambian los colores,
+                    las fuentes, los tamaños y la posición de cada elemento.
+                </p>
+            </article>
+            <!-- Tema 3: JavaScript -->
+            <article class="tema">
+                <h2>3. JavaScript</h2>
+                <p>
+                    JavaScript es el <strong>comportamiento</strong>. Con él la página
+                    reacciona a los clics, guarda datos y cambia su contenido.
+                </p>
+            </article>
+            <!-- Casilla para marcar la lección como leída (se guarda en localStorage) -->
+            <label class="leida">
+                <input type="checkbox" id="leida">
+                He leído la lección
+            </label>
+        </section>
+        <!-- Pregunta final de la lección -->
+        <section class="pregunta">
+            <h2>❓ Pregunta final</h2>
+            <p>¿Qué lenguaje se usa para cambiar los colores y el diseño de una página?</p>
+            <!-- Opciones de respuesta: solo se puede elegir una (mismo name) -->
+            <div class="opciones">
+                <!-- Opción A -->
+                <label class="opcion">
+                    <input type="radio" name="respuesta" value="html"> HTML
+                </label>
+                <!-- Opción B (la correcta) -->
+                <label class="opcion">
+                    <input type="radio" name="respuesta" value="css"> CSS
+                </label>
+                <!-- Opción C -->
+                <label class="opcion">
+                    <input type="radio" name="respuesta" value="js"> JavaScript
+                </label>
+            </div>
+            <!-- Botones: comprobar la respuesta y reiniciar la lección -->
+            <div class="acciones">
+                <button id="btn-comprobar" class="boton">Comprobar</button>
+                <button id="btn-reiniciar" class="boton boton-gris">Reiniciar</button>
+            </div>
+            <!-- Aquí se muestra si la respuesta fue correcta o incorrecta -->
+            <p id="resultado" class="resultado"></p>
+            <!-- Aquí se muestra el número de intentos -->
+            <p id="intentos" class="intentos">Intentos: 0</p>
+        </section>
+    </main>
+</body>
+</html>

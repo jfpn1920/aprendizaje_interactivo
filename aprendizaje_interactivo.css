@@ -1,0 +1,96 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #eef2ff;
+    --tarjeta: #ffffff;
+    --principal: #4f46e5;
+    --bien: #16a34a;
+    --mal: #dc2626;
+    --texto: #1f2937;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 640px; margin: 0 auto; }
+/* Encabezado centrado */
+.encabezado { text-align: center; margin-bottom: 24px; }
+.encabezado h1 { color: var(--principal); margin-bottom: 6px; }
+.encabezado p { color: #6b7280; }
+/* ===== Lección ===== */
+/* Tarjeta de cada tema */
+.tema {
+    background: var(--tarjeta);
+    border-left: 6px solid var(--principal);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+/* Título y texto de cada tema */
+.tema h2 { font-size: 1.2rem; margin-bottom: 6px; }
+.tema p { line-height: 1.5; }
+/* Casilla "He leído la lección" */
+.leida {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* ===== Pregunta ===== */
+/* Tarjeta de la pregunta final */
+.pregunta {
+    background: var(--tarjeta);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.pregunta h2 { margin-bottom: 8px; }
+/* Lista vertical de opciones */
+.opciones { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+/* Cada opción de respuesta */
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* Efecto al pasar el mouse por una opción */
+.opcion:hover { border-color: var(--principal); }
+/* ===== Botones ===== */
+/* Fila de botones */
+.acciones { display: flex; gap: 10px; }
+/* Estilo base de los botones */
+.boton {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--principal);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Botón secundario de color gris */
+.boton-gris { background: #6b7280; }
+/* Botón desactivado (cuando ya se acertó) */
+.boton:disabled { opacity: 0.5; cursor: not-allowed; }
+/* ===== Resultado ===== */
+/* Mensaje de resultado */
+.resultado { margin-top: 14px; font-weight: bold; text-align: center; }
+/* Colores según acierto o error (clases que añade el JS) */
+.resultado.correcto { color: var(--bien); }
+.resultado.incorrecto { color: var(--mal); }
+/* Contador de intentos */
+.intentos { margin-top: 8px; text-align: center; color: #6b7280; }
