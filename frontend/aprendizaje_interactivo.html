@@ -13,14 +13,14 @@
     <!--|estructuracion_aprendizaje_interactivo|-->
     <!-------------------------------------------->
     <main class="contenedor">
-        <!-- Encabezado con título y subtítulo -->
         <header class="encabezado">
             <h1>📚 Aprendizaje Interactivo</h1>
             <p>Lección: los tres pilares de una página web</p>
         </header>
-        <!-- Lección: tres tarjetas con la explicación de cada tecnología -->
+        <!------------------------->
+        <!--|leccion_interactiva|-->
+        <!------------------------->
         <section class="leccion">
-            <!-- Tema 1: HTML -->
             <article class="tema">
                 <h2>1. HTML</h2>
                 <p>
@@ -28,7 +28,6 @@
                     los títulos, párrafos, imágenes, botones y enlaces.
                 </p>
             </article>
-            <!-- Tema 2: CSS -->
             <article class="tema">
                 <h2>2. CSS</h2>
                 <p>
@@ -36,7 +35,6 @@
                     las fuentes, los tamaños y la posición de cada elemento.
                 </p>
             </article>
-            <!-- Tema 3: JavaScript -->
             <article class="tema">
                 <h2>3. JavaScript</h2>
                 <p>
@@ -44,39 +42,39 @@
                     reacciona a los clics, guarda datos y cambia su contenido.
                 </p>
             </article>
-            <!-- Casilla para marcar la lección como leída (se guarda en localStorage) -->
             <label class="leida">
                 <input type="checkbox" id="leida">
                 He leído la lección
             </label>
         </section>
-        <!-- Pregunta final de la lección -->
+        <!-------------------->
+        <!--|pregunta_final|-->
+        <!-------------------->
         <section class="pregunta">
             <h2>❓ Pregunta final</h2>
             <p>¿Qué lenguaje se usa para cambiar los colores y el diseño de una página?</p>
-            <!-- Opciones de respuesta: solo se puede elegir una (mismo name) -->
             <div class="opciones">
-                <!-- Opción A -->
                 <label class="opcion">
                     <input type="radio" name="respuesta" value="html"> HTML
                 </label>
-                <!-- Opción B (la correcta) -->
                 <label class="opcion">
                     <input type="radio" name="respuesta" value="css"> CSS
                 </label>
-                <!-- Opción C -->
                 <label class="opcion">
                     <input type="radio" name="respuesta" value="js"> JavaScript
                 </label>
             </div>
-            <!-- Botones: comprobar la respuesta y reiniciar la lección -->
+            <!----------------------->
+            <!--|botones_de_accion|-->
+            <!----------------------->
             <div class="acciones">
-                <button id="btn-comprobar" class="boton">Comprobar</button>
-                <button id="btn-reiniciar" class="boton boton-gris">Reiniciar</button>
+                <button type="button" id="btn-comprobar" class="boton">Comprobar</button>
+                <button type="button" id="btn-reiniciar" class="boton boton-gris">Reiniciar</button>
             </div>
-            <!-- Aquí se muestra si la respuesta fue correcta o incorrecta -->
+            <!-------------------------->
+            <!--|resultado_y_contador|-->
+            <!-------------------------->
             <p id="resultado" class="resultado"></p>
-            <!-- Aquí se muestra el número de intentos -->
             <p id="intentos" class="intentos">Intentos: 0</p>
         </section>
     </main>
